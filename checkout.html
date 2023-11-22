@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+        <script type="text/javascript" src="functions.js"> 
+</script>
+
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        .newStyle1 {
+             
+                  margin-left: 45% 
+        }
+        .newStyle2 {
+             
+                 margin-left: 50%  
+        }
+        
+        .header {
+              margin-left: 40% 
+        }
+    </style>
+</head>
+<body bgcolor="#b9ffff" onload="checkout()">
+
+    <h1 class="header"><b>Enter Customer Info Below</b></h1>
+     <form  action="http://localhost/insert.php" METHOD="post"  name="form1"ENCTYPE="multipart/form_data" >
+     <h4  class="newStyle1"  > First Name <input type="text" maxlength="20" name="name_first" id="name_first" value="" title ="alphas and space" size="40"  pattern="[A-z ]+"    required="required" />   </h4>   
+     <h4  class="newStyle1"  >Last Name <input type="text" maxlength="20" name="name_last" id="name_last"  size="40" pattern="[A-z ]+" align="middle" required="required"/></h4>        
+     <h4  class="newStyle1"  > Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" maxlength="30" name="email" id="email"  size="40" required="required" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" align="middle" /></h4>        
+     <h4  class="newStyle1"  > Address 1&nbsp; <input type="text" maxlength="50" name="address1" id="address1"  size="40"  required="required" align="middle" onchange="address(event)"onkeydown="address(event)" onkeypress="address(event)"/></h4>       
+     <h4  class="newStyle1"  > Address 2&nbsp; <input type="text" maxlength="50" name="address2"  id="address2"  size="40" pattern=".*" align="middle" /></h4>       
+
+
+     <h4 class="newStyle1"  >City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input type="text" maxlength="10" name="city" id="city"  size="40" pattern="[A-z ]+" align="middle" required="required" /></h4>      
+     <h4 class="newStyle1"  > State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" maxlength="3" name="state" id="state"  size="5" pattern="[A-Z]{2}" align="middle" required="required" /></h4>       
+     <h4 class="newStyle1"  > ZIP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" maxlength="6" name="zip"  id="zip" size="7" pattern="[0-9]{5}" align="middle" required="required" /></h4>       
+     <h4  class="newStyle1"> Country&nbsp;&nbsp; <input type="text" maxlength="15" name="country" id="country"  size="40" pattern="[A-z ]+" align="middle" /></h4>        
+          
+     <h4 class="newStyle1"  >Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input align="middle" maxlength="15" name="phone"  id="phone" pattern="^[\(]?\d{3}[\)]?-?\d{3}-?\d{4}$" size="40" type="text" required="required" /></h4>
+     <h4 class="newStyle1"  >Fax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input align="middle" maxlength="15" name="fax"  id="fax" pattern="^[\(]?\d{3}[\)]?-?\d{3}-?\d{4}$" size="40" type="text" /></h4>
+     
+      <h5 class="newStyle1"  > <input type="checkbox" name="check1" id="check1"  value=""  />Check here to be added to the mailing list<br /></h5>
+
+          <h1 align="center"> Purchased Item </h1><BR />
+       <table border="0" align="center"    id="table1">
+      <tr>
+          
+      
+
+      </tr>
+	  
+	  <script type="text/javascript">
+
+
+
+  function checkout() {
+   //document.write(document.cookie + "<BR/>");
+
+    var p_total = 0;
+    //See if Cookie is empty
+    if (document.cookie.length > 0) {
+        //document.write(document.cookie + "<BR/>");
+
+
+
+
+        //Unescape cookies - only necessary if used escape
+        var my_cookies = unescape(document.cookie);
+
+        //Split cookie up based on ;
+        var cookie_array = my_cookies.split(";");
+        var product = my_cookies.split(";");
+        //Get the length of the resulting array
+        var length = cookie_array.length;
+
+        for (i = 0; i < length; i++) {
+            //Split key/value pairs
+            var cookie_val = cookie_array[i].split("=");
+        }
+
+        for (i = 0; i < length; i++) {
+			// document.write("$value is " + cookie_val[i] + "<br/>"); 
+            var index = i;
+            //Build table dynamically
+            var newrow1 = document.getElementById("table1").insertRow(1);
+            var newrow2 = document.getElementById("table1").insertRow(2);
+            var newrow3 = document.getElementById("table1").insertRow(3);
+            var newrow4 = document.getElementById("table1").insertRow(4);
+            var newrow5 = document.getElementById("table1").insertRow(5);
+
+            var newtd0a = newrow1.insertCell(-1);
+            newtd0a.align = "center";
+            newtd0a.width = 100;
+            var newtd1a = newrow2.insertCell(-1);
+            newtd1a.align = "center";
+            var newtd2a = newrow3.insertCell(-1);
+            newtd2a.align = "center";
+            var newtd3a = newrow4.insertCell(-1);
+            newtd3a.align = "center";
+            var newtd4a = newrow5.insertCell(-1);
+            newtd4a.align = "center";
+			
+			 var newtd5a = newrow5.insertCell(-1);
+            newtd5a.align = "center";
+            newtd0a.innerHTML = ' <BR /><img src=  "' + cookie_val[0] + ' "/> ';
+			            newtd1a.innerHTML ='<tr>'+cookie_val[1]+' </tr>';
+
+            newtd2a.innerHTML = " Quanity:   "+ cookie_val[2];
+            newtd3a.innerHTML =" Price :  " +cookie_val[3];
+            newtd4a.innerHTML = " Total :  " + cookie_val[4];
+            newtd5a.innerHTML = '<input type="hidden"  name="item_no" id="item_no" size="0"  maxlength="0" value="'+ cookie_val[5] + '"/> <input type="hidden"  name="qantity" id="qantity" size="0"  maxlength="0" value="'+ cookie_val[2] + '"/>';
+
+            var cookie_val = cookie_array[i].split("=");
+
+        }
+
+
+
+    }
+    else {
+        window.alert("Empty Cart - Please Buy Something First");
+    }
+
+}
+
+</script>
+    
+  </table>
+       
+
+
+         <BR /><BR />
+    
+<h2 class="header">Enter Credit Card Information Below</h2>
+      <h3 class="newStyle2">   <input type="radio" name="radio" value="MC" checked="checked" /><img src="images/checkout/mc.jpg" width="40"/>&nbsp; Master Card<br /></h3>
+      <h3 class="newStyle2">   <input type="radio" name="radio" value="Visa"   /><img src="images/checkout/visa.jpg" width="40"/>&nbsp; Visa<br /></h3>
+      <h3 class="newStyle2">   <input type="radio" name="radio" value="amex"   /><img src="images/checkout/amex.jpg" width="40"/>&nbsp; American Express<br /></h3>
+      <h3 class="newStyle2">   <input type="radio" name="radio" value="discover"   /><img src="images/checkout/discover.jpg" width="40"/>&nbsp; Discover<br /></h3>
+
+         <h2 class="header">Enter Card Number and Expiration<br /> </h2>
+         <h4 class="newStyle1" >
+         
+        Credit Card Number&nbsp; <input type="text" maxlength="50" name="cc_no" name="cc_no"  size="40"  required="required" align="middle" onchange="credit(event)"onkeydown="credit(event)" onkeypress="credit(event)"/></h4> 
+
+         
+  <h4 class="newStyle1">Expiration Month <select name="expMonth"  id="expMonth"  size="1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                       </select></h4>
+         <h4 class="newStyle1">  Enter Expiration Year:<select name="expYear" id="expYear">
+                          
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                       </select></h4><br /><br />
+
+        <h3 class="newStyle1">     <input type="submit" value="Buy Now !" name="submit_button" />
+         <input type="reset" value="Reset All" name="reset_button" /><br /><br /><br /></h3>
+
+
+         <h4 class="newStyle2"><i><a  href="store_index.html"  >Return to Previous </a></i></h4>
+  </form>
+</body>
+</html>

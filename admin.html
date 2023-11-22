@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  charset="utf-8" />
+    <title></title>
+    <style>
+
+        .style1
+        {  
+            position: absolute;
+            text-align: left;
+            left: 45%;
+            width: 450px;
+        }
+        
+        .style2
+        {
+            position: absolute;
+            text-align: left;
+            left: 43%;
+            top: 85px;
+            padding-top: 1%;
+            padding-left: 3%;
+            width: 450px;
+            height: 90px;
+            border: 2px solid rgb(0,0,0);
+        }
+
+        .style3
+        {
+            position: absolute;
+            left: 45%;
+            top: 200px;
+            width: 450px;
+        }
+        
+        .style4
+        {
+            position: absolute;
+            width: 450px;
+            height: 50px;
+            top: 770px;
+            left: 43%;
+            padding-left: 3%;
+        }
+
+        #blog 
+        {
+            border: 2px solid #000000;
+            width: 450px;
+            height: 450px;
+            background-color: #CCCCCC;
+        }
+        .auto-style1 {
+            position: absolute;
+            width: 450px;
+            height: 50px;
+            top: 724px;
+            left: 43%;
+            padding-left: 3%;
+        }
+        .reset{
+            margin-left:5%;
+        }
+         .submit{
+            margin-left:60%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="http://localhost/process.php?XDEBUG_SESSION_START=test2" method="POST"  enctype="multipart/form-data">
+    
+        <div class="style1">
+           <h1 align="center">Administrative Blog Form<br/></h1> <BR/><BR/><br/>
+        </div>
+    
+        <div class="style2">
+            Name: <input type="text" name="name" id="name" /><BR/>
+            Title:&nbsp;&nbsp;&nbsp; <input type="text" name="title" id="title" /><BR/>
+            Image: <input type="file" name="image" id="image" size="40" />
+        </div>
+
+        <div class="style3">
+            <h1 align="center">Enter Blog Below</h1>
+             <textarea name="blog" id="blog"></textarea>
+        </div>
+
+        <div class="auto-style1">
+            <BR/>
+            <div class="reset">
+                <input  type="reset" value="Reset"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" style="margin-left:80%"  value="Submit"/></div> 
+             
+        
+         </div>
+    </form>
+
+ 
+
+</body>
+</html>

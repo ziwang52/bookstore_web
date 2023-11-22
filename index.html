@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+       <script type="text/javascript" src="functions11.js"> 
+    </script>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type = "text/css">
+        html, body{
+            height: 100%;
+           
+        }
+
+       
+          
+
+        .div1
+        {  
+           font-family: "Script MT";
+            font-weight: bold;
+            width: 100%;
+            top: 0px;
+            height: 150px;
+            background-image: url('images/home/bg_head2.png');
+            border: solid;
+             
+          
+        }
+
+         .div2{
+            font-family: "Script MT";
+            font-weight: bold;
+            font-size: x-large;
+            float: left;
+            margin-left: 0px;
+            width: 8%;
+            height: 150px;
+            border-style: solid;
+            padding-top: 0px;
+            padding-left: 0px;
+            font-style: italic;
+            font-weight: bolder;
+        }
+        .class1
+        {
+        
+           border-style: solid;          
+            margin-top: 0px;
+            height: 150px;
+            width: 27%;
+             float: left;
+        margin-left: 0px;   
+        
+        border-style: solid;
+        padding-top: 0px;
+        padding-left: 0px;
+        }
+        .class2{
+             
+            height: 150px;
+            width: 27%;
+        float: left;
+        margin-left: 0px;    
+        padding-top: 0px;
+        padding-left: 0px;
+        }
+      
+                                    
+         .menu1          {
+            font-family: arial;
+            font-size: 11px;
+            color: #FFFFFF;
+            border: 2px solid rgb(0,0,0);
+/*padding-left: 1em;*/text-align: center;
+            width: 10em;
+            background-color: rgb(0, 0, 255);
+            vertical-align: 50%;
+            clip: rect(10px, auto, auto, auto);
+            line-height: 30px;
+        }
+        .menu1:hover a  {
+            display: block;
+            color: #FFFFFF;
+            background-color: #0000FF;
+            text-align: center;
+        }
+        .menu1 a        {
+            display: none;
+            border-top: 2px solid rgb(222,213,175);
+            background-color: rgb(51, 102, 255);
+            width: 10em;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+        .menu1 a:hover  {
+            color: #FFFFFF;
+            background-color: rgb(60,139,255);
+        }
+      
+  
+  
+        .menu_bar {
+            display:flex;
+            flex-direction: row;
+            position: absolute;
+            left: 20%;
+            top: 167px;
+            height: 45px;
+            width: auto;
+            z-index: 1;
+            font-family: Arial;
+            font-size: 11px;
+            color: #FFFFFF;
+            background-color: #0000FF;
+        }
+                                                     
+        
+         .div3{
+             
+            
+            margin-top:25px;
+            margin-left: 0px;
+            width: 30%;
+            height: 100%;
+            border-style: solid;
+            padding-top: 0px;
+            padding-left: 0px;
+         
+            font-weight: bolder;
+        }
+
+         .txt{
+            font-family: "Bell MT";
+            color: #800080;
+            z-index: 1;
+            position: absolute;
+            margin-left: 41px;
+            margin-top: 41px;
+            padding-top: 100px;
+            width: 500px;
+            top: 10%;
+            font-style: italic;
+        }
+
+
+        .imagestyle1 {
+            width: 15%;
+             padding-top: 50px;
+            margin-top:50px;
+            z-index: auto;
+            position: relative;
+            height: 100px;
+            left: 60px;
+        }
+
+
+        .auto-style1 {
+            width: 287px;
+        }
+        .auto-style3 {
+            width: 287px;
+            height: 185px;
+        }
+
+
+        .div4 {
+            top: 275px;
+            margin-left: 400px;
+            width: 30%;
+            height: 100%;
+            border-style: solid;
+            padding-top: 0px;
+            padding-left: 5px;
+             padding-right: 5px;
+            font-weight: bolder;
+            position: absolute;
+            vertical-align: 40%;
+            left: 163px;
+            background-color: #CCCCCC;
+            text-indent: 4px;
+            text-align: left;
+        }
+         .auto-style4 {
+            width: 400px;
+            height: 256px;
+            margin-left: 5px;
+            margin-top: 5px;
+            border-style: solid;
+            border-width: medium;
+            opacity: 1.0;
+            
+            position: absolute;
+            top: 300px;
+            left: 2%;
+        }
+           .special {
+            width: 400px;
+            height: 256px;
+            margin-left: 5px;
+           
+            border-style: solid;
+            border-width: medium;
+             opacity:0.0;  position: absolute;
+            top: 300px;
+            left: 2%
+        }
+
+         .div5 {
+            border-width: thick;
+            top: 275px;
+            margin-right: 0px;
+            width: 20%;
+            height: 100%;
+            border-style: solid;
+            padding-top: 0px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-weight: bolder;
+            position: absolute;
+            vertical-align: 40%;
+            left: 75%;
+            background-color: #FFFFFF;
+            text-indent: 4px;
+            text-align: left;
+            right: 0px;
+            color: #000000;
+        }
+
+         .box4 {
+            border-width: thin;
+            float: left;
+            margin-left: 0px;
+            width: 20%;
+            height: 30%;
+            border-style: solid;
+            padding-top: 0px;
+            padding-left: 0px;
+        }
+        .auto-style5 {
+            border-width: thin;
+            float: none;
+            margin-left: -2px;
+            width: 100%;
+            height: auto;
+            border-style: none none solid none;
+            padding-top: 0px;
+            padding-left: -2px;
+            left: 0px;
+        }
+        .div6{
+            position: absolute;
+            top: 580px;
+            left: 25%;
+            z-index: 1;
+        }
+      
+      </style>
+
+
+
+
+
+      
+</head>
+<body  bgcolor=" #2224A2" onload="cyclePics()">
+    <div class="div1"> 
+            
+         <img class="class1" src="images/home/logo.png" /> 
+        <div class="div2"> <i>Balanced Living – A Lifestyle </i></div>
+         <div class="class2"> <img   src="images/home/healthHeader2.png" /></div>
+    
+       </div>
+
+        <div class="menu_bar">
+         <div class="menu1">
+         About Us
+         <a href="#">General</a>
+         <a href = "#">Message</a>
+        
+       </div>
+       
+      <div class="menu1">
+        Products
+         <a href = "store_index.html">E-books</a>
+         <a href = "#">Fitness</a>
+      
+       </div>
+ <div class="menu1">
+         Fitness Centers
+         <a href = "#">Anytime</a>
+         <a href = "#">Conway Regional</a>      
+       </div>
+        
+    <div class="menu1">
+         Eqiupment
+         <a href = "#">Total Gym</a>
+         <a href = "#">Bow-Flex</a>
+      
+       </div>
+     <div class="menu1">
+        Restaurants
+         <a href = "#">Healthy Dining</a>
+         <a href = "#">Organic Foods</a>
+       <a href = "#">All Veggies</a>
+       </div>
+
+  <div class="menu1">
+       Members
+         <a href = "#">Log In</a>
+         <a href = "#">Reset Password</a>
+       <a href = "#">Membership</a>
+       </div>
+
+  <div class="menu1">
+       Vistors
+         <a href = "#">Registration</a>
+         <a href = "#">Festival Pictures</a>
+       <a href = "blog.php">Blogs</a>
+       </div>
+
+ <div class="menu1">
+       Contact US
+         <a href = "#">Our Store</a>
+         <a href = "#">Orther Vendors</a>
+ 
+       </div>
+
+    </div>
+    
+    
+
+<div class="div3">
+    
+    <div class="imagestyle1 ">  <img src="images/home/healthHeader3.jpg"  />  
+        <a href="#"><h3 class="txt">Current Events</h3></a>
+    </div>
+    
+    <div class="imagestyle1 "> <img src="images/home/healthHeader4a.jpg" class="auto-style1"  />   
+          <a href="#"><h3 class="txt">CEO's Message</h3></a> 
+      </div>
+
+      <div class="imagestyle1 "> <img src="images/home/recipes.jpg" class="auto-style3"  />  
+          <a href="#"><h3 class="txt">Healthy Recipes</h3></a> 
+
+      </div>
+
+</div>
+    
+    <div class="div4">
+    <BR/>  <h1>&nbsp; Mission Statement</h1> <BR/> The Balance-Living Organization is completely committed to assisting you to a full and balanced lifestyle. Members have access to our knowledgeable advisors and trainers for assistance pertaining to health, fitness, parenting, financial and technical programming guidance. Our members our among the most successful and well balanced professionals, and we can do the same for you! Come join us and become Well Balanced Now!<BR/>
+        
+          <img id="pic1" src="images/home/weights.jpg" class="auto-style4"    /> 
+        <img id="pic2" src="images/1.png" class="special"    />        
+        
+        <div class="div6">
+        <h4 align ="center"><a href="bedroom.html" id ="link1">Weights and Scales</a></h4>
+            </div>
+
+    </div>
+  
+     
+
+    <div class="div5">
+
+        <div class="auto-style5"> <h1><b>Office Hours</b> </h1>   
+        <BR /> Mon-Fri 8:00am - 5:00pm
+        </div>
+        
+        <div class="auto-style5"> <h1><b>Address</b> </h1>   
+        <BR />2312 Front Street<br />
+          Conway, Arkansas 72035
+        </div>
+
+          <div class="auto-style5"> <h1><b>Contact US</b> </h1>   
+        <BR />John Levine<br />
+          <b>501-350-3291</b>
+        </div>
+
+
+    </div>
+
+    </body>
+</html>
